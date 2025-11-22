@@ -1,1 +1,121 @@
 
+# -------------------------------
+# Mathematical Operators
+# -------------------------------
+
+20 + 20        # Addition
+30 - 20        # Subtraction
+2 ^ 5          # Exponentiation (Power)
+20 * 20        # Multiplication
+20 / 20        # Division
+sqrt(25)       # Square root
+log2(10)       # Logarithm base 2
+log10(100)     # Logarithm base 10
+log2(5) + log10(8) / 5   # Combined expression
+abs(-45)       # Absolute value
+floor(4.5)     # Round down
+ceiling(1.2)   # Round up
+
+
+# -------------------------------
+# Defining Variables
+# -------------------------------
+
+A1 <- 50       # Numeric variable
+A2 <- 'salam'  # Character variable
+A3 <- 10       # Numeric variable
+A4 <- A1 + A3  # Arithmetic using variables
+
+class(A1)      # Check type of A1
+class(A2)      # Check type of A2
+print(A4)      # Print result
+
+a = 10         # Alternative assignment style
+b <- 10        # Preferred assignment in R
+a != b         # Logical comparison (not equal)
+
+
+# -------------------------------
+# Vectors
+# -------------------------------
+
+x <- c(1, 2, 5, 3, 9, 50)   # Create a numeric vector
+x
+length(x)                   # Vector length
+x[3]                        # Access 3rd element
+
+x <- x[-3]                  # Remove 3rd element
+x
+
+# Append new values
+x <- append(x, c(55, 88))
+x
+class(x)
+
+# -------------------------------
+# Factors
+# -------------------------------
+
+v <- c(1:100)               # Numeric vector
+v <- factor(v)              # Convert to factor
+v
+
+m <- c('q', 'w', 'e', 'w', 'e', 'q')
+m <- factor(m, labels = c('qqq', 'www', 'eee'))
+m
+
+# -------------------------------
+# Lists
+# -------------------------------
+
+u <- list('salam', 12, TRUE)  # Create a list
+u
+class(u)
+'salam' %in% u                # Check membership
+
+p <- rep(c('Tumor', 'normal'), times = 10)   # Repeat pattern
+p
+
+g <- seq(from = 0, to = 100, by = 5)         # Sequence
+g
+
+# -------------------------------
+# Matrices
+# -------------------------------
+
+l <- matrix(1:100, nrow = 25, ncol = 4)      # Create a matrix
+l
+
+dim(l)         # Dimensions
+l[3, 4]        # Element at row 3, col 4
+l[3, ]         # Entire row 3
+l[, 3]         # Entire column 3
+ncol(l)        # Number of columns
+nrow(l)        # Number of rows
+length(l)      # Total elements
+
+# Add a new column
+d <- c(26:50)
+l <- cbind(l, d)
+dim(l)
+
+# Remove column 5 and row 10
+l <- l[, -5]
+l <- l[-10, ]
+dim(l)
+
+# -------------------------------
+# Data Frames
+# -------------------------------
+
+t  <- c(1:100)
+t2 <- c(101:200)
+H <- data.frame(t, t2)
+View(H)
+
+# List containing multiple object types
+t3 <- list('salam', a, H)
+View(t3)
+
+# Help / documentation
+?dim
