@@ -5,22 +5,6 @@
 setwd("C:/Users/amir/Desktop/learn R")  # مسیر کاری را مشخص می‌کند / sets working directory
 dir()  # فایل‌های داخل مسیر را نمایش می‌دهد / lists files in working directory
 
-
-#############################
-#   خواندن داده‌ها / Reading Data Files
-#############################
-
-data_microarray <- read.table("Microarray.txt")  # خواندن داده microarray / read Microarray data
-View(data_microarray)
-class(data_microarray)  # نوع داده را نمایش می‌دهد / shows class of object
-
-data_RNAseq <- read.table("RNA-seq.txt", sep="\t")  # خواندن داده RNA-seq با جداکننده tab / tab-delimited
-View(data_RNAseq)
-
-data_sage <- read.table("SAGE.txt", sep="\t")  # خواندن داده SAGE / read SAGE data
-View(data_sage)
-
-
 #############################
 #   دیتاست مصرف سوخت / Fuel Consumption Dataset
 #############################
